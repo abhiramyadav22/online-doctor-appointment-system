@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add this new column to the table header -->
+<th>Status</th>
+
+<!-- Add this new column to the table body -->
+<td class="status-{{ appointment.status.lower() }}">
+    {{ appointment.status }}
+</td>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Appointments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointments</h1>
+        
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Doctor</th>
+                        <th>Specialty</th>
+                        <th>Appointment Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for appointment in appointments %}
+                        <tr>
+                            <td>{{ appointment.patient_name }}</td>
+                            <td>{{ doctors[appointment.doctor_id | int - 1].name }}</td>
+                            <td>{{ doctors[appointment.doctor_id | int - 1].specialty }}</td>
+                            <td>{{ appointment.appointment_time }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <a href="/" class="button back-button">Back to Booking</a>
+        </div>
+    </div>
+</body>
+</html>
