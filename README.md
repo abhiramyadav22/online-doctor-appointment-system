@@ -9,3 +9,4 @@ Benefits of Online Doctor Appointments
 ✔️ Time-Saving – Avoid long waiting times at clinics.
 ✔️ Cost-Effective – Some telemedicine services are more affordable than in-person visits.
 ✔️ Accessibility – Useful for people in remote areas or with mobility issues.
+![Screenshot (1)](https://github.com/user-attachments/assets/15ee1b04-e3f9-4277-8485-6ec3aec377d3)
